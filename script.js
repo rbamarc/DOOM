@@ -9,14 +9,17 @@ const countdown = (input) => {
         if (i === 0) {
             setTimeout(function () {
                 renderCount('KABOOM!!!')
+                startKaboom()
             }, input * 1000)
         }
         
         }
     
     
+}
 
-    
+const startKaboom = () => {
+    document.body.style.backgroundColor = 'red'
 }
 
 const renderCount = (value) => {

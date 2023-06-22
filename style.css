@@ -13,13 +13,17 @@ display: flex;
 
 .count-card{
     height: 30rem;
-        width: 30rem;
-        background-color: red;
-        font-family: Arial, Helvetica, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+    width: 30rem;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 10rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    animation: fade-in 0.5s ease-in-out;
 
 }
 
@@ -32,5 +36,33 @@ form{
 
 
 .count-num{
-    color: white;
+    animation: countdown-animation 1s ease-in-out 3s;
+}
+
+@keyframes fade-in{
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes countdown-animation {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50%{
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
